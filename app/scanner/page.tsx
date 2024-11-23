@@ -11,6 +11,18 @@ export default function ScannerPage() {
   const router = useRouter();
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
   const [isProcessing] = useState(false);
+  /** Loading state for the processing button */
+  const [isLoading, setIsLoading] = useState(false);
+
+  /** Handle the processing start with loading state */
+  const handleProcessing = () => {
+    setIsLoading(true);
+    // Simulate processing delay
+    setTimeout(() => {
+      setIsLoading(false);
+      router.push("/report");
+    }, 2000);
+  };
 
   return (
     <div className="flex h-screen w-screen p-8 gap-4">
@@ -75,8 +87,8 @@ export default function ScannerPage() {
               color="primary"
               fullWidth
               isDisabled={!selectedFile}
-              onClick={() => router.push("/report")}
-              // onClick={() => setIsProcessing(true)}
+              isLoading={isLoading}
+              onClick={handleProcessing}
             >
               Start Processing
             </Button>
