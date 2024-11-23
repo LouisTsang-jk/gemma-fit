@@ -72,7 +72,7 @@ export default function UploadPanel({ onFileSelect }: UploadPanelProps) {
   };
 
   return (
-    <div className="flex flex-col gap-6 flex-1">
+    <div className="h-full flex flex-col gap-6">
       <input
         type="file"
         ref={fileInputRef}
@@ -81,11 +81,11 @@ export default function UploadPanel({ onFileSelect }: UploadPanelProps) {
         onChange={(e) => handleFileSelect(e.target.files)}
       />
 
-      <Card className="h-full">
-        <CardBody>
+      <Card className="flex-1">
+        <CardBody className="h-full p-0 overflow-hidden">
           <div
             className={`
-          flex-1
+          w-full h-full
           flex flex-col items-center justify-center gap-4
           transition-colors cursor-pointer relative
           ${isDragging ? "border-primary bg-primary/10" : "border-divider"}
@@ -97,11 +97,11 @@ export default function UploadPanel({ onFileSelect }: UploadPanelProps) {
             onClick={handleClickUpload}
           >
             {previewUrl ? (
-              <div className="w-full h-full p-4">
+              <div className="w-full h-full flex items-center justify-center">
                 <img
                   src={previewUrl}
                   alt="Preview"
-                  className="w-full h-full object-contain rounded-lg"
+                  className="max-w-full max-h-full object-contain"
                 />
               </div>
             ) : (

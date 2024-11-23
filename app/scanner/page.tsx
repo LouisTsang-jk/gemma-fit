@@ -30,8 +30,11 @@ export default function ScannerPage() {
       </Card>
 
       {/* Right Content */}
-      <div className="flex-1 p-6 h-full">
-        <UploadPanel onFileSelect={setSelectedFile} />
+      <div className="flex-1 p-6 h-full flex flex-col gap-4">
+        <div className="flex-1">
+          <UploadPanel onFileSelect={setSelectedFile} />
+        </div>
+
         {/* Report */}
         <div className="flex flex-col gap-2">
           <p className="text-lg font-bold">Report</p>
