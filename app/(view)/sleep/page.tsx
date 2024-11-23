@@ -1,3 +1,8 @@
+import { MusicCard } from "./Music/music";
+
 export default function Sleep() {
-  return <div>Sleep</div>;
+  return <div>
+    <MusicCard/>
+  </div>;
 }
+

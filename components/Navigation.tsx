@@ -19,6 +19,12 @@ const navItems = [
     icon: LayoutDashboard,
   },
   {
+    key: "report",
+    label: "Report",
+    href: "/report",
+    icon: LayoutDashboard,
+  },
+  {
     key: "food",
     label: "Food",
     href: "/food",
