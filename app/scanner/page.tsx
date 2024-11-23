@@ -61,7 +61,8 @@ export default function ScannerPage() {
               color="primary"
               fullWidth
               isDisabled={!selectedFile}
-              onClick={() => setIsProcessing(true)}
+              onClick={() => router.push("/repo")}
+              // onClick={() => setIsProcessing(true)}
             >
               Start Processing
             </Button>
