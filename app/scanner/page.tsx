@@ -3,11 +3,14 @@ import { useState } from "react";
 import Person from "./components/Person";
 import UploadPanel from "@/components/UploadPanel";
 import { Button, Card, CardBody } from "@nextui-org/react";
-import { ArrowRight } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
+import { useRouter } from "next/navigation";
 
 /** Scanner page component */
 export default function ScannerPage() {
+  const router = useRouter();
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
+  const [isProcessing, setIsProcessing] = useState(false);
 
   return (
     <div className="flex h-screen w-screen">
@@ -35,19 +38,43 @@ export default function ScannerPage() {
           <UploadPanel onFileSelect={setSelectedFile} />
         </div>
 
-        {/* Report */}
-        <div className="flex flex-col gap-2">
-          <p className="text-lg font-bold">Report</p>
-          <p className="text-sm text-default-500"></p>
+        <AnimatePresence>
+          {isProcessing && (
+            <motion.div
+              initial={{ height: 0, opacity: 0 }}
+              animate={{ height: 300, opacity: 1 }}
+              exit={{ height: 0, opacity: 0 }}
+              transition={{ duration: 0.3 }}
+              className="flex flex-col gap-2 bg-content2 rounded-lg p-4"
+            >
+              <p className="text-lg font-bold">Report</p>
+              <p className="text-sm text-default-500">
+                Processing results will appear here...
+              </p>
+            </motion.div>
+          )}
+        </AnimatePresence>
+
+        <div className="w-full">
+          {!isProcessing ? (
+            <Button
+              color="primary"
+              fullWidth
+              isDisabled={!selectedFile}
+              onClick={() => setIsProcessing(true)}
+            >
+              Start Processing
+            </Button>
+          ) : (
+            <Button
+              color="secondary"
+              fullWidth
+              onClick={() => router.push("/food")}
+            >
+              Continue
+            </Button>
+          )}
         </div>
-        <Button
-          color="primary"
-          endContent={<ArrowRight className="w-4 h-4" />}
-          className="w-full"
-          isDisabled={!selectedFile}
-        >
-          Start Processing
-        </Button>
       </div>
     </div>
   );
