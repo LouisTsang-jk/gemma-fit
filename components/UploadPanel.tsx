@@ -97,10 +97,7 @@ export default function UploadPanel({ onFileSelect }: UploadPanelProps) {
             onClick={handleClickUpload}
           >
             {previewUrl ? (
-              <div
-                className="w-full h-full flex items-center justify-center p-4 
-              max-h-[400px]"
-              >
+              <div className="w-full h-full flex items-center justify-center p-4 max-h-[400px]">
                 <img
                   src={previewUrl}
                   alt="Preview"

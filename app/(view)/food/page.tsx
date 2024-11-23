@@ -77,41 +77,42 @@ export default function Food() {
               </div>
             ) : selectedFile ? (
               <div>
-                <p className="text-default-500">
+                <p className="text-default-500 px-4">
                   <PieChart />
-                  日均能量和营养摄入分析：
+                  披萨成分分析：
                   <br />
                   <br />
-                  • 能量： 约 1400 千卡
+                  • 总重量： 约 620 克
                   <br />
-                  • 蛋白质： 约 200 克
+                  • 面团： 200 克 (32.3%)
                   <br />
-                  • 脂肪： 约 150 克
+                  • 芝士： 150 克 (24.2%)
                   <br />
-                  • 碳水化合物： 约 200 克
+                  • 番茄酱： 100 克 (16.1%)
+                  <br />
+                  • 香肠： 80 克 (12.9%)
+                  <br />
+                  • 蘑菇： 50 克 (8.1%)
+                  <br />
+                  • 青椒： 40 克 (6.4%)
                   <br />
                   <br />
-                  建议（减脂减重目标）：
+                  营养建议：
                   <br />
                   <br />
-                  • 本周摄入总能量过高，建议控制在1200千卡以内
+                  • 这是一份标准尺寸的披萨，总热量约为 1500-1800 千卡
                   <br />
-                  • 本周摄入碳水含量过高，建议均102g
+                  • 芝士和香肠的含量较高，属于高脂肪、高蛋白质食材
                   <br />
-                  • 本周蛋白质摄入略低，建议日均
-                  210g。建议适当增加鱼、蛋、奶或豆类等优质蛋白的摄入。
+                  • 建议搭配沙拉等低热量食物，平衡营养摄入
                   <br />
-                  •
-                  本周蔬菜摄入充足，但水果种类略显单一，建议增加其他种类水果的摄入，以获得更丰富的维生素和矿物质。
-                  <br />•
-                  本周油脂摄入略高，建议减少红烧肉等高脂肪食物的摄入，或选择更健康的烹饪方式。
+                  • 如果在减重期间，建议与他人分享食用或选择蔬菜含量更多的配料
+                  <br />• 青椒和蘑菇等蔬菜配料提供了额外的膳食纤维和维生素
                 </p>
               </div>
             ) : (
               <p className="text-default-500 p-4">
-                Upload a food image to get detailed nutritional information and
-                calorie estimates. The analysis will include portion sizes, main
-                ingredients, and calorie breakdown.
+                上传食物图片以获取详细的营养信息和卡路里估算。分析将包含份量大小、主要配料和卡路里分布。
               </p>
             )}
           </CardBody>
