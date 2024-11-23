@@ -7,7 +7,7 @@ export default function Food() {
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
 
   return (
-    <div className="flex h-screen">
+    <div className="flex h-full">
       {/* Upload Panel: 固定宽度 400px */}
       <div className="w-[400px] h-full p-4 bg-content1">
         <UploadPanel onFileSelect={setSelectedFile} />

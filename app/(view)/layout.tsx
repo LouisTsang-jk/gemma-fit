@@ -26,7 +26,7 @@ export default function ViewLayout({
       </aside>
 
       {/* Main content area */}
-      <main className="flex-1 p-4">{children}</main>
+      <main className="flex-1 p-4 h-screen">{children}</main>
     </div>
   );
 }
