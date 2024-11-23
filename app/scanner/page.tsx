@@ -56,6 +56,20 @@ export default function ScannerPage() {
         </AnimatePresence>
 
         <div className="w-full">
+          <div className="w-full">
+            <div className="flex gap-2">
+              <div className="rounded-lg mb-4 overflow-hidden">
+                <img height={52} width={52} src="/app_1.webp" alt="report" />
+              </div>
+              <div className="rounded-lg overflow-hidden">
+                <img height={52} width={52} src="/app_2.webp" alt="report" />
+              </div>
+              <div className="rounded-lg overflow-hidden bg-white">
+                <img height={52} width={52} src="/app_3.webp" alt="report" />
+              </div>
+            </div>
+            <p className="pb-2">这些 App 的数据将会导入到 Gemma Fit</p>
+          </div>
           {!isProcessing ? (
             <Button
               color="primary"
