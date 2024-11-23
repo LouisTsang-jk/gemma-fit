@@ -55,7 +55,7 @@ export default function Navigation() {
           href={href}
           as={Link}
           startContent={<Icon className="w-4 h-4" />}
-          className={pathname === href ? "bg-default-100" : ""}
+          className={`py-4 ${pathname === href ? "bg-default-100" : ""}`}
         >
           {label}
         </ListboxItem>
