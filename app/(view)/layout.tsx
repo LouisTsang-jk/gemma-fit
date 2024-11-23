@@ -17,7 +17,7 @@ export default function ViewLayout({
   return (
     <div className="min-h-screen flex">
       {/* Sidebar navigation */}
-      <aside className="w-64 bg-content1 border-r border-divider">
+      <aside className="w-64 flex-shrink-0 bg-content1 border-r border-divider">
         <div className="p-4">
           <div>
             <Navigation />

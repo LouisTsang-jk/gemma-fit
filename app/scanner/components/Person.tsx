@@ -1,9 +1,14 @@
-export default function Person() {
+type PersonProps = {
+  width?: number;
+  height?: number;
+};
+
+export default function Person({ width = 255, height = 710 }: PersonProps) {
   return (
     <>
       <svg
-        width="255px"
-        height="710px"
+        width={`${width}px`}
+        height={`${height}px`}
         viewBox="0 0 255 710"
         version="1.1"
         xmlns="http://www.w3.org/2000/svg"
