@@ -5,3 +5,5 @@
 - tailwindcss
 - lucide-react
 - framer-motion
+- next-view-transitions
+- formik
