@@ -42,12 +42,12 @@ const navItems = [
     href: "/sleep",
     icon: Moon,
   },
-  {
-    key: "medical",
-    label: "Medical",
-    href: "/medical",
-    icon: Stethoscope,
-  },
+  // {
+  //   key: "medical",
+  //   label: "Medical",
+  //   href: "/medical",
+  //   icon: Stethoscope,
+  // },
 ] as const;
 
 export default function Navigation() {
