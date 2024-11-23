@@ -19,7 +19,7 @@ const PromptInput = React.forwardRef<HTMLTextAreaElement, TextAreaProps>(
           input: cn("py-0", classNames?.input),
         }}
         minRows={1}
-        placeholder="有哪些提高睡眠质量的建议？"
+        placeholder="如何制定一个有效的健身计划？"
         radius="lg"
         variant="bordered"
         {...props}

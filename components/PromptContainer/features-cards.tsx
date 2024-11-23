@@ -19,7 +19,7 @@ const featuresCategories = [
   },
   {
 key: "capabilities",
-title: "睡眠 App 功能",
+title: "功能",
 icon: <Icon icon="solar:magic-stick-3-linear" width={40} />,
 descriptions: [
 "提供个性化的睡眠建议，设定最佳入睡时间。",
