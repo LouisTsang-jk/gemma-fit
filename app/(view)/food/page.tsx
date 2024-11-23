@@ -2,6 +2,7 @@
 import UploadPanel from "@/components/UploadPanel";
 import { useState } from "react";
 import { Card, CardBody, Spinner } from "@nextui-org/react";
+import PieChart from "./components/PieChart";
 
 export default function Food() {
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
@@ -77,6 +78,7 @@ export default function Food() {
             ) : selectedFile ? (
               <div>
                 <p className="text-default-500">
+                  <PieChart />
                   Regular Cheese Pizza (30cm diameter, 8 slices):
                   <br />
                   Each slice contains approximately 200-300 calories.
