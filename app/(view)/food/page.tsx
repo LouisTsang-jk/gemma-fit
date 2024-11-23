@@ -6,50 +6,50 @@ import { Card, CardBody, Spinner } from "@nextui-org/react";
 export default function Food() {
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
   const [loading, setLoading] = useState(false);
-  const [result, setResult] = useState<any>(null);
+  const [result, setResult] = useState(null);
 
-  const imgUrl = `https://big-vision-paligemma.hf.space/file=/tmp/gradio/18bee4d7dd777847e11918533fe6e06576d21aad/image.png`;
+  // const imgUrl = `https://big-vision-paligemma.hf.space/file=/tmp/gradio/18bee4d7dd777847e11918533fe6e06576d21aad/image.png`;
 
   /** Handles file upload and analysis */
-  const handleAnalyzeImage = async (file: File) => {
-    setLoading(true);
-    setResult(null);
-    try {
-      const data = JSON.stringify({
-        inputs: {
-          text: "What kind of this food is it?",
-          image: imgUrl,
-        },
-      });
+  // const handleAnalyzeImage = async (file: File) => {
+  //   setLoading(true);
+  //   setResult(null);
+  //   try {
+  //     const data = JSON.stringify({
+  //       inputs: {
+  //         text: "What kind of this food is it?",
+  //         image: imgUrl,
+  //       },
+  //     });
 
-      const response = await fetch(process.env.NEXT_PUBLIC_ENDPOINT_URL!, {
-        headers: {
-          Accept: "application/json",
-          Authorization: `Bearer ${process.env.NEXT_PUBLIC_HUGGING_FACE_TOKEN}`,
-          "Content-Type": "application/json",
-        },
-        method: "POST",
-        body: data,
-      });
+  //     const response = await fetch(process.env.NEXT_PUBLIC_ENDPOINT_URL!, {
+  //       headers: {
+  //         Accept: "application/json",
+  //         Authorization: `Bearer ${process.env.NEXT_PUBLIC_HUGGING_FACE_TOKEN}`,
+  //         "Content-Type": "application/json",
+  //       },
+  //       method: "POST",
+  //       body: data,
+  //     });
 
-      if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
-      }
+  //     if (!response.ok) {
+  //       throw new Error(`HTTP error! status: ${response.status}`);
+  //     }
 
-      const contentType = response.headers.get("content-type");
-      if (!contentType || !contentType.includes("application/json")) {
-        throw new Error("API did not return JSON");
-      }
+  //     const contentType = response.headers.get("content-type");
+  //     if (!contentType || !contentType.includes("application/json")) {
+  //       throw new Error("API did not return JSON");
+  //     }
 
-      const result = await response.json();
-      setResult(result);
-    } catch (error) {
-      console.error("Error analyzing image:", error);
-      setResult({ error: "Failed to analyze image. Please try again." });
-    } finally {
-      setLoading(false);
-    }
-  };
+  //     const result = await response.json();
+  //     setResult(result);
+  //   } catch (error) {
+  //     console.error("Error analyzing image:", error);
+  //     setResult({ error: "Failed to analyze image. Please try again." });
+  //   } finally {
+  //     setLoading(false);
+  //   }
+  // };
 
   /** Handles file selection */
   const handleFileSelect = (file: File | null) => {

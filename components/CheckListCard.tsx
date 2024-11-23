@@ -1,37 +1,50 @@
 "use client";
 
-import type {CardProps} from "@nextui-org/react";
+import type { CardProps } from "@nextui-org/react";
 
 import React from "react";
-import {Card,Image , CardBody, CardHeader, Listbox, ListboxItem, Progress} from "@nextui-org/react";
-import {Icon} from "@iconify/react";
+import { Card, CardBody, Listbox, ListboxItem } from "@nextui-org/react";
+import { Icon } from "@iconify/react";
 
-const items = [
+/** Defines the structure for checklist items */
+type ChecklistItem = {
+  key: string;
+  icon: string;
+  title: string;
+  description: string;
+  isCompleted: boolean;
+};
+
+const items: ChecklistItem[] = [
   {
     key: "apple-body-type",
     icon: "solar:heart-linear",
     title: "身材特点",
-    description: "通常具有以下三个显著特点：宽肩、圆腹和大胸。"
-    },
-    {
+    description: "通常具有以下三个显著特点：宽肩、圆腹和大胸。",
+    isCompleted: false,
+  },
+  {
     key: "fat-distribution",
     icon: "solar:heart-linear",
     title: "脂肪分布",
-    description: "主要集中在腹部，导致上半身显得较为丰满，而四肢通常较为纤细。"
-    },
-    {
+    description: "主要集中在腹部，导致上半身显得较为丰满，而四肢通常较为纤细。",
+    isCompleted: false,
+  },
+  {
     key: "health-risks",
     icon: "solar:heart-linear",
     title: "健康风险",
-    description: "这种身材类型易患高血压、糖尿病等健康问题，因其中心型肥胖特征对内脏健康的影响较大。"
-    }
+    description:
+      "这种身材类型易患高血压、糖尿病等健康问题，因其中心型肥胖特征对内脏健康的影响较大。",
+    isCompleted: false,
+  },
 ];
 
 export default function Component(props: CardProps) {
   return (
     <Card className="w-full max-w-[520px]" {...props}>
       <CardBody className="flex p-4 flex-wrap sm:flex-nowrap">
-          <h3 className="text-large font-medium">苹果型</h3>
+        <h3 className="text-large font-medium">苹果型</h3>
         <Listbox
           hideSelectedIcon
           aria-label="Onboarding checklist"
@@ -51,7 +64,11 @@ export default function Component(props: CardProps) {
               endContent={
                 <div className="flex flex-none">
                   {item.isCompleted ? (
-                    <Icon className="text-secondary" icon="solar:check-circle-bold" width={30} />
+                    <Icon
+                      className="text-secondary"
+                      icon="solar:check-circle-bold"
+                      width={30}
+                    />
                   ) : (
                     <Icon
                       className="text-default-400"
@@ -63,7 +80,11 @@ export default function Component(props: CardProps) {
               }
               startContent={
                 <div className="item-center flex rounded-medium border border-divider p-2">
-                  <Icon className="text-secondary" icon={item.icon} width={24} />
+                  <Icon
+                    className="text-secondary"
+                    icon={item.icon}
+                    width={24}
+                  />
                 </div>
               }
               title={item.title}
@@ -74,5 +95,3 @@ export default function Component(props: CardProps) {
     </Card>
   );
 }
-
-

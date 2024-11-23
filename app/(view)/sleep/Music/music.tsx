@@ -1,12 +1,12 @@
-'use client'
+"use client";
 import React from "react";
-import {Card, CardBody, Image, Button, Slider} from "@nextui-org/react";
-import {HeartIcon} from "./HeartIcon";
-import {PauseCircleIcon} from "./PauseCircleIcon";
-import {NextIcon} from "./NextIcon";
-import {PreviousIcon} from "./PreviousIcon";
-import {RepeatOneIcon} from "./RepeatOneIcon";
-import {ShuffleIcon} from "./ShuffleIcon";
+import { Card, CardBody, Image, Button, Slider } from "@nextui-org/react";
+import { HeartIcon } from "./HeartIcon";
+import { PauseCircleIcon } from "./PauseCircleIcon";
+import { NextIcon } from "./NextIcon";
+import { PreviousIcon } from "./PreviousIcon";
+import { RepeatOneIcon } from "./RepeatOneIcon";
+import { ShuffleIcon } from "./ShuffleIcon";
 
 export function MusicCard() {
   const [liked, setLiked] = React.useState(false);
@@ -47,6 +47,8 @@ export function MusicCard() {
                 <HeartIcon
                   className={liked ? "[&>path]:stroke-transparent" : ""}
                   fill={liked ? "currentColor" : "none"}
+                  width={24}
+                  height={24}
                 />
               </Button>
             </div>
@@ -75,7 +77,11 @@ export function MusicCard() {
                 radius="full"
                 variant="light"
               >
-                <RepeatOneIcon className="text-foreground/80" />
+                <RepeatOneIcon
+                  className="text-foreground/80"
+                  width={24}
+                  height={24}
+                />
               </Button>
               <Button
                 isIconOnly
@@ -83,7 +89,7 @@ export function MusicCard() {
                 radius="full"
                 variant="light"
               >
-                <PreviousIcon />
+                <PreviousIcon width={24} height={24} />
               </Button>
               <Button
                 isIconOnly
@@ -91,7 +97,7 @@ export function MusicCard() {
                 radius="full"
                 variant="light"
               >
-                <PauseCircleIcon size={54} />
+                <PauseCircleIcon width={54} height={54} />
               </Button>
               <Button
                 isIconOnly
@@ -99,7 +105,7 @@ export function MusicCard() {
                 radius="full"
                 variant="light"
               >
-                <NextIcon />
+                <NextIcon width={24} height={24} />
               </Button>
               <Button
                 isIconOnly
@@ -107,7 +113,11 @@ export function MusicCard() {
                 radius="full"
                 variant="light"
               >
-                <ShuffleIcon className="text-foreground/80" />
+                <ShuffleIcon
+                  className="text-foreground/80"
+                  width={24}
+                  height={24}
+                />
               </Button>
             </div>
           </div>

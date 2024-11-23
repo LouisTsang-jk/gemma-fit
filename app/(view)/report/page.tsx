@@ -5,7 +5,11 @@ import Faq from "@/components/FAQ";
 import CheckListCard from "@/components/CheckListCard";
 import { Icon } from "@iconify/react";
 
-const ratings = [
+const ratings: {
+  rating: number;
+  count: number;
+  color?: "warning" | "secondary" | "success" | "danger";
+}[] = [
   {
     rating: 120,
     count: 120,
