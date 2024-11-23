@@ -49,7 +49,7 @@ export default function Report() {
    <CheckListCard/>
    </div>
     <div className='flex flex-col'>
-      <Image src="/women.webp" alt="Women" width={300}  />
+      <Image src="/women.webp" alt="Women" width={370}  />
     </div>
     <div className='flex-1 flex flex-col gap-4'>
    <SummaryRatingCard averageRating={64} ratings={ratings} totalRatingCount={139} />

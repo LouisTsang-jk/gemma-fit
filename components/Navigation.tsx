@@ -12,12 +12,12 @@ import {
 
 /** Navigation items configuration */
 const navItems = [
-  {
-    key: "dashboard",
-    label: "Dashboard",
-    href: "/dashboard",
-    icon: LayoutDashboard,
-  },
+  // {
+  //   key: "dashboard",
+  //   label: "Dashboard",
+  //   href: "/dashboard",
+  //   icon: LayoutDashboard,
+  // },
   {
     key: "report",
     label: "Report",

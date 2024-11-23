@@ -86,7 +86,7 @@ export default function Component() {
               }
               variant="flat"
             >
-              Attach
+              从其他 App 导入
             </Button>
             <Button
               size="sm"
@@ -96,15 +96,6 @@ export default function Component() {
               variant="flat"
             >
               Voice Commands
-            </Button>
-            <Button
-              size="sm"
-              startContent={
-                <Icon className="text-default-500" icon="solar:notes-linear" width={18} />
-              }
-              variant="flat"
-            >
-              Templates
             </Button>
           </div>
           <p className="py-1 text-tiny text-default-400">{prompt.length}/2000</p>
