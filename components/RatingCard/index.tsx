@@ -19,7 +19,7 @@ const SummaryRatingCard = React.forwardRef<HTMLDivElement, SummaryRatingCardProp
   ({className, ratings, totalRatingCount, averageRating, onWriteReview, ...props}, ref) => (
     <div
       ref={ref}
-      className={cn("flex flex-col gap-2 rounded-medium bg-content1 p-6 shadow-small", className)}
+      className={cn("flex flex-col gap-2 rounded-medium bg-content1 p-4 shadow-small", className)}
       {...props}
     >
       <div className="flex items-center gap-2">

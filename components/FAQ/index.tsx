@@ -3,16 +3,16 @@
 import React from "react";
 import {Accordion, AccordionItem} from "@nextui-org/react";
 import {Icon} from "@iconify/react";
-
 import faqs from "./faqs";
+
 
 export default function Component() {
   return (
-    <section className="mx-auto w-full max-w-6xl px-0 py-20 sm:py-32 md:px-6 lg:px-8 lg:py-40">
+    <section className="mx-auto w-full max-w-6xl px-0   md:px-6  py-8">
       <div className="mx-auto flex w-full max-w-4xl flex-col gap-6">
         <h2 className="px-2 text-3xl leading-7">
           <span className="inline-block md:hidden">FAQs</span>
-          <span className="hidden md:inline-block">Frequently asked questions</span>
+          <span className="hidden md:inline-block">为了更好的提升您的健康状况，请选择一个短期健康目标          </span>
         </h2>
         <Accordion
           fullWidth
