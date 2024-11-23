@@ -19,7 +19,7 @@ const PromptInput = React.forwardRef<HTMLTextAreaElement, TextAreaProps>(
           input: cn("py-0", classNames?.input),
         }}
         minRows={1}
-        placeholder="Enter a prompt here"
+        placeholder="有哪些提高睡眠质量的建议？"
         radius="lg"
         variant="bordered"
         {...props}
