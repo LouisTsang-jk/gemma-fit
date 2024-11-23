@@ -44,7 +44,7 @@ export default function PieChart({ className }: PieChartProps) {
           name: "披萨成分",
           type: "pie",
           radius: ["40%", "70%"],
-          center: ["50%", "65%"],
+          center: ["50%", "60%"],
           avoidLabelOverlap: false,
           itemStyle: {
             borderRadius: 10,

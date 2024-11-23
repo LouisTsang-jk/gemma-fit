@@ -10,7 +10,7 @@ import { useRouter } from "next/navigation";
 export default function ScannerPage() {
   const router = useRouter();
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
-  const [isProcessing, setIsProcessing] = useState(false);
+  const [isProcessing] = useState(false);
 
   return (
     <div className="flex h-screen w-screen p-8 gap-4">
@@ -61,7 +61,7 @@ export default function ScannerPage() {
               color="primary"
               fullWidth
               isDisabled={!selectedFile}
-              onClick={() => router.push("/repo")}
+              onClick={() => router.push("/report")}
               // onClick={() => setIsProcessing(true)}
             >
               Start Processing

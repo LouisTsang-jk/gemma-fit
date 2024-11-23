@@ -79,25 +79,32 @@ export default function Food() {
               <div>
                 <p className="text-default-500">
                   <PieChart />
-                  Regular Cheese Pizza (30cm diameter, 8 slices):
-                  <br />
-                  Each slice contains approximately 200-300 calories.
+                  日均能量和营养摄入分析：
                   <br />
                   <br />
-                  Main calorie sources: Pizza crust, cheese.
+                  • 能量： 约 1400 千卡
                   <br />
-                  Additional toppings (like Italian sausage, bacon) can add
-                  50-100 calories per slice.
+                  • 蛋白质： 约 200 克
+                  <br />
+                  • 脂肪： 约 150 克
+                  <br />
+                  • 碳水化合物： 约 200 克
                   <br />
                   <br />
-                  Common toppings calorie contribution (per slice):
+                  建议（减脂减重目标）：
                   <br />
-                  • Italian sausage: ~50 calories
                   <br />
-                  • Mushrooms: ~10 calories
+                  • 本周摄入总能量过高，建议控制在1200千卡以内
                   <br />
-                  • Green peppers: ~5 calories
-                  <br />• Olives: ~20 calories
+                  • 本周摄入碳水含量过高，建议均102g
+                  <br />
+                  • 本周蛋白质摄入略低，建议日均
+                  210g。建议适当增加鱼、蛋、奶或豆类等优质蛋白的摄入。
+                  <br />
+                  •
+                  本周蔬菜摄入充足，但水果种类略显单一，建议增加其他种类水果的摄入，以获得更丰富的维生素和矿物质。
+                  <br />•
+                  本周油脂摄入略高，建议减少红烧肉等高脂肪食物的摄入，或选择更健康的烹饪方式。
                 </p>
               </div>
             ) : (
