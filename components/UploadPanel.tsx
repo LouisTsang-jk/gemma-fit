@@ -97,11 +97,11 @@ export default function UploadPanel({ onFileSelect }: UploadPanelProps) {
             onClick={handleClickUpload}
           >
             {previewUrl ? (
-              <div className="w-full h-full flex items-center justify-center">
+              <div className="w-full h-full flex items-center justify-center p-4">
                 <img
                   src={previewUrl}
                   alt="Preview"
-                  className="max-w-full max-h-full object-contain"
+                  className="w-full h-full object-contain"
                 />
               </div>
             ) : (
