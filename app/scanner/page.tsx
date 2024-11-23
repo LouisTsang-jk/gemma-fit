@@ -13,7 +13,7 @@ export default function ScannerPage() {
   const [isProcessing, setIsProcessing] = useState(false);
 
   return (
-    <div className="flex h-screen w-screen">
+    <div className="flex h-screen w-screen p-8 gap-4">
       {/* Left Panel */}
       <Card className="h-full">
         <CardBody>
@@ -33,8 +33,8 @@ export default function ScannerPage() {
       </Card>
 
       {/* Right Content */}
-      <div className="flex-1 p-6 h-full flex flex-col gap-4">
-        <div className="h-full p-4 bg-content1">
+      <div className="flex-1 px-4 h-full flex flex-col gap-4">
+        <div className="h-full bg-content1">
           <UploadPanel onFileSelect={setSelectedFile} />
         </div>
 
