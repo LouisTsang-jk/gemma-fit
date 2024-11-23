@@ -2,7 +2,7 @@ const faqs = [
     {
       title: "减脂减重",
       content:
-        "Acme is a design system for building performant, accessible and beautiful web experiences.",
+        "",
     },
     {
       title: "加强运动能力",
