@@ -34,7 +34,7 @@ export default function ScannerPage() {
 
       {/* Right Content */}
       <div className="flex-1 p-6 h-full flex flex-col gap-4">
-        <div className="flex-1">
+        <div className="h-full p-4 bg-content1">
           <UploadPanel onFileSelect={setSelectedFile} />
         </div>
 

@@ -8,7 +8,7 @@ export default function Food() {
 
   return (
     <div className="flex h-full">
-      {/* Upload Panel: 固定宽度 400px */}
+      {/* Upload Panel */}
       <div className="w-[400px] h-full p-4 bg-content1">
         <UploadPanel onFileSelect={setSelectedFile} />
       </div>
